@@ -1,4 +1,4 @@
-# animais-fantasticos
+# Animais Fantasticos
 
 ### Projeto
 
