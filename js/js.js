@@ -1,4 +1,4 @@
-import iniciarScrollSuave from './modules/srcoll-suave.js'
+import ScrollSuave from './modules/srcoll-suave.js'
 import inicarAnimacaoScroll from './modules/animacao-srcoll.js'
 import inicarTab from './modules/iniciar-tab.js'
 import inicarAcordion from './modules/navegacao-tab.js'
@@ -10,7 +10,11 @@ import iniciarFuncionamento from './modules/funcionamento.js'
 import iniciarFetchAnimais from './modules/fetch-animais.js'
 import iniciarFetchBitcoin from './modules/fetch-bitcoin.js'
 
-iniciarScrollSuave()
+
+const scrollSuave = new ScrollSuave('[data-menu="menu"] a[href^="#"]')
+scrollSuave.init()
+console.log(scrollSuave);
+
 inicarAnimacaoScroll()
 inicarTab()
 inicarAcordion()
