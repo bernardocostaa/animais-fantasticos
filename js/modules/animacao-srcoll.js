@@ -21,4 +21,4 @@ export default function inicarAnimacaoScroll(){
 }
 
 
-console.log('sou malucooooooo');
+console.log('souoo');
