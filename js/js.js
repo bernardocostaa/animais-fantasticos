@@ -1,6 +1,6 @@
 import ScrollSuave from './modules/srcoll-suave.js'
 import inicarAnimacaoScroll from './modules/animacao-srcoll.js'
-import inicarTab from './modules/iniciar-tab.js'
+import TabNav from './modules/iniciar-tab.js'
 import Acordion from './modules/navegacao-tab.js'
 import iniciarModal from './modules/modal.js'
 import iniciarTooltip from './modules/tooltip.js'
@@ -18,10 +18,13 @@ console.log(scrollSuave);
 const acordionList = new Acordion("[data-acordion='acordion'] dt")
 acordionList.init()
 
+const tabNav = new TabNav("[data-tab='menu'] li","[data-tab='content'] section")
+tabNav.init()
+
+
 
 
 inicarAnimacaoScroll()
-inicarTab()
 iniciarModal()
 iniciarTooltip()
 iniciarMenuDropdown()
