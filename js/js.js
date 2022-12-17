@@ -2,7 +2,7 @@ import ScrollSuave from './modules/srcoll-suave.js'
 import inicarAnimacaoScroll from './modules/animacao-srcoll.js'
 import TabNav from './modules/iniciar-tab.js'
 import Acordion from './modules/navegacao-tab.js'
-import iniciarModal from './modules/modal.js'
+import Modal from './modules/modal.js'
 import iniciarTooltip from './modules/tooltip.js'
 import iniciarMenuDropdown from './modules/menudropdown.js'
 import iniciarMenuMobile from './modules/menu-mobile.js'
@@ -21,11 +21,12 @@ acordionList.init()
 const tabNav = new TabNav("[data-tab='menu'] li","[data-tab='content'] section")
 tabNav.init()
 
+const modal = new Modal('[data-modal="abrir"]','[data-modal="fechar"]','[data-modal="container"]')
+modal.init()
 
 
 
 inicarAnimacaoScroll()
-iniciarModal()
 iniciarTooltip()
 iniciarMenuDropdown()
 iniciarMenuMobile()
