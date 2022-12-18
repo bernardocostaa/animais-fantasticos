@@ -3,7 +3,7 @@ import inicarAnimacaoScroll from './modules/animacao-srcoll.js'
 import TabNav from './modules/iniciar-tab.js'
 import Acordion from './modules/navegacao-tab.js'
 import Modal from './modules/modal.js'
-import iniciarTooltip from './modules/tooltip.js'
+import Tooltip from './modules/tooltip.js'
 import iniciarMenuDropdown from './modules/menudropdown.js'
 import iniciarMenuMobile from './modules/menu-mobile.js'
 import iniciarFuncionamento from './modules/funcionamento.js'
@@ -24,10 +24,12 @@ tabNav.init()
 const modal = new Modal('[data-modal="abrir"]','[data-modal="fechar"]','[data-modal="container"]')
 modal.init()
 
+const tooltip = new Tooltip('[data-tooltip]')
+tooltip.init()
+
 
 
 inicarAnimacaoScroll()
-iniciarTooltip()
 iniciarMenuDropdown()
 iniciarMenuMobile()
 iniciarFuncionamento()
