@@ -1,38 +1,52 @@
-export default function iniciarNumeros(){
-  function animarNumeros(){
-    const numeros = document.querySelectorAll('[data-numero]')
-    
-    numeros.forEach((item)=>{
-      const total = +item.innerText
-      const incremento = Math.floor(total / 100)
-      let comeco = 0
-      const timer = setInterval(()=>{
-        comeco += incremento
-        item.innerText = comeco
-        if(comeco > total){
-        item.innerText = total
-          clearInterval(timer)
-        }
-      },25 * Math.random())
+export default class AnimarNumeros{
+  constructor(numeros,observeTarget,observadorClass){
+    this.numeros = document.querySelectorAll(numeros)
+    this.observadorClass = observadorClass
+    this.observeTarget = document.querySelector(observeTarget)
+
+    this.handleMutation = this.handleMutation.bind(this)
+
+  }
+
+  static incrementarNumeros(item){
+    const total = +item.innerText
+    const incremento = Math.floor(total / 100)
+    let comeco = 0
+    const timer = setInterval(()=>{
+      comeco += incremento
+      item.innerText = comeco
+      if(comeco > total){
+      item.innerText = total
+        clearInterval(timer)
+      }
+    },25 * Math.random())
+  }
+
+  animarNumeros(){
+    this.numeros.forEach((item)=>{
+    this.constructor.incrementarNumeros(item)
     })
   }
   
-  
-  
-  const observeTarget = document.querySelector('.numeros')
-  let observador
-
-  function handleMutation(mutacao){
-    if(mutacao[0].target.classList.contains('ativo')){
+   handleMutation(mutacao){
+     if(mutacao[0].target.classList.contains(this.observadorClass)){
+      // console.log(this);
       // console.log(mutacao);
-      observador.disconnect()
-      animarNumeros()
+      this.observador.disconnect()
+      this.animarNumeros()
     }
   }
+
+  addEventoAnimarObserve(){
+    this.observador = new MutationObserver(this.handleMutation)
+    console.log(this.handleMutation);
+    this.observador.observe(this.observeTarget,{attributes:true})
+  }
+
+  init(){
+    this.addEventoAnimarObserve()
+    return this
+  }
   
-  observador = new MutationObserver(handleMutation)
-  
-  
-  observador.observe(observeTarget,{attributes:true})
  
 }
