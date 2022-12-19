@@ -1,5 +1,5 @@
 import ScrollSuave from './modules/srcoll-suave.js'
-import inicarAnimacaoScroll from './modules/animacao-srcoll.js'
+import ScrollAnimar from './modules/srcollAnimar.js'
 import TabNav from './modules/iniciar-tab.js'
 import Acordion from './modules/navegacao-tab.js'
 import Modal from './modules/modal.js'
@@ -27,9 +27,11 @@ modal.init()
 const tooltip = new Tooltip('[data-tooltip]')
 tooltip.init()
 
+const scrollAnimar = new ScrollAnimar('[data-scroll="anima"]')
+scrollAnimar.init()
 
 
-inicarAnimacaoScroll()
+
 iniciarMenuDropdown()
 iniciarMenuMobile()
 iniciarFuncionamento()
@@ -37,16 +39,3 @@ fetchAnimais('./animaisapi.json','.numeros-grid')
 fetchBitcoin('https://blockchain.info/ticker','.btc-preco')
 
 
-// import $ from 'jquery';
-// import _ from 'lodash';
-
-// $('nav').hide()
-
-
-// const diferenca = _.difference(['Banana', 'Uva'],['Banana','Morango'])
-// console.log(diferenca);
-
-// --mode define o modo da compilação
-// --watch define se deve ficar observando
-// --entry o arquivo de entrada
-// -o a pasta de saída
