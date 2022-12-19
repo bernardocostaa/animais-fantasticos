@@ -1,9 +1,11 @@
+import debounce from "./debounce.js";
+
 export default class ScrollAnimar{
   constructor(sections){
     this.sections = document.querySelectorAll(sections)
     this.metadeTela = Math.floor(window.innerHeight * 0.6)
 
-    this.checarDistancias = this.checarDistancias.bind(this)
+    this.checarDistancias = debounce(this.checarDistancias.bind(this),50)
   }
 
   getDistancia(){
@@ -17,6 +19,7 @@ export default class ScrollAnimar{
   }
 
   checarDistancias(){
+    console.log('teste');
     this.distancias.forEach((item)=>{
       if(window.pageYOffset > item.sectionTop){
         item.element.classList.add('ativo')
