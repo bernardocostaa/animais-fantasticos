@@ -1,26 +1,43 @@
 import outsideClick from './clickoutside.js'
 
-export default function iniciarMenuDropdown() {
-  const dropdownMenus = document.querySelectorAll('[data-dropdown]')
+export default class MenuDropdown {
+  constructor(dropdownMenus,eventos){
+    this.dropdownMenus = document.querySelectorAll(dropdownMenus)
+    if(eventos === undefined){
+      this.eventos = ['touchstart','click']
+    }else{
+      this.eventos = eventos
+    }
+    this.ativarDropdownMenu = this.ativarDropdownMenu.bind(this)
+  }
   
-  function handleClick(event){
+   ativarDropdownMenu(event){
+    const element = event.currentTarget
     event.preventDefault()
     // console.log(this);
-    this.classList.add('ativar')
-    outsideClick(this,['touchstart','click'] ,() =>{ // n pode ser function () da erro tem que ser arrom fuction 
-      this.classList.remove('ativar')
+    element.classList.add('ativar')
+    outsideClick(element,this.eventos ,() =>{
+      element.classList.remove('ativar')
     })
   }
 
-  dropdownMenus.forEach((menu)=>{
-    ['touchstart','click'].forEach(userEvent =>{
-      menu.addEventListener(userEvent,handleClick)
+  addEventosDropdown(){
+    this.dropdownMenus.forEach((menu)=>{
+      this.eventos.forEach(userEvent =>{
+        menu.addEventListener(userEvent,this.ativarDropdownMenu)
+      })
     })
-  })
+  }
+
+  init(){
+    this.addEventosDropdown()
+    return this
+  }
+
   
-  
- 
+
 }
+
 
 
 

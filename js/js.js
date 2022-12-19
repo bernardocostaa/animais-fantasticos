@@ -4,7 +4,7 @@ import TabNav from './modules/iniciar-tab.js'
 import Acordion from './modules/navegacao-tab.js'
 import Modal from './modules/modal.js'
 import Tooltip from './modules/tooltip.js'
-import iniciarMenuDropdown from './modules/menudropdown.js'
+import MenuDropdown from './modules/menudropdown.js'
 import iniciarMenuMobile from './modules/menu-mobile.js'
 import iniciarFuncionamento from './modules/funcionamento.js'
 import fetchAnimais from './modules/fetch-animais.js'
@@ -30,9 +30,10 @@ tooltip.init()
 const scrollAnimar = new ScrollAnimar('[data-scroll="anima"]')
 scrollAnimar.init()
 
+const menudropdown = new MenuDropdown('[data-dropdown]')
+menudropdown.init()
 
 
-iniciarMenuDropdown()
 iniciarMenuMobile()
 iniciarFuncionamento()
 fetchAnimais('./animaisapi.json','.numeros-grid')
