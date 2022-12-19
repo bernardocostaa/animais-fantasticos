@@ -8,7 +8,7 @@ import iniciarMenuDropdown from './modules/menudropdown.js'
 import iniciarMenuMobile from './modules/menu-mobile.js'
 import iniciarFuncionamento from './modules/funcionamento.js'
 import fetchAnimais from './modules/fetch-animais.js'
-import iniciarFetchBitcoin from './modules/fetch-bitcoin.js'
+import fetchBitcoin from './modules/fetch-bitcoin.js'
 
 
 const scrollSuave = new ScrollSuave('[data-menu="menu"] a[href^="#"]')
@@ -34,7 +34,7 @@ iniciarMenuDropdown()
 iniciarMenuMobile()
 iniciarFuncionamento()
 fetchAnimais('./animaisapi.json','.numeros-grid')
-iniciarFetchBitcoin()
+fetchBitcoin('https://blockchain.info/ticker','.btc-preco')
 
 
 // import $ from 'jquery';
