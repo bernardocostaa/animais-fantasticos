@@ -11,7 +11,6 @@ export default class TabNav {
     });
     
     const direcao = this.tabContent[index].dataset.anime
-    console.log(direcao);
     this.tabContent[index].classList.add(this.classAtivo,direcao);
   }
 

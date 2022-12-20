@@ -30,8 +30,6 @@ export default class AnimarNumeros{
   
    handleMutation(mutacao){
      if(mutacao[0].target.classList.contains(this.observadorClass)){
-      // console.log(this);
-      // console.log(mutacao);
       this.observador.disconnect()
       this.animarNumeros()
     }
@@ -39,7 +37,6 @@ export default class AnimarNumeros{
 
   addEventoAnimarObserve(){
     this.observador = new MutationObserver(this.handleMutation)
-    console.log(this.handleMutation);
     this.observador.observe(this.observeTarget,{attributes:true})
   }
 

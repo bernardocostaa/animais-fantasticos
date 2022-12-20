@@ -19,7 +19,6 @@ export default class ScrollAnimar{
   }
 
   checarDistancias(){
-    console.log('teste');
     this.distancias.forEach((item)=>{
       if(window.pageYOffset > item.sectionTop){
         item.element.classList.add('ativo')
