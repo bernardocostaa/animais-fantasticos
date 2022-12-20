@@ -5,7 +5,7 @@ import Acordion from './modules/navegacao-tab.js'
 import Modal from './modules/modal.js'
 import Tooltip from './modules/tooltip.js'
 import MenuDropdown from './modules/menudropdown.js'
-import iniciarMenuMobile from './modules/menu-mobile.js'
+import MenuMobile from './modules/menu-mobile.js'
 import iniciarFuncionamento from './modules/funcionamento.js'
 import fetchAnimais from './modules/fetch-animais.js'
 import fetchBitcoin from './modules/fetch-bitcoin.js'
@@ -33,8 +33,9 @@ scrollAnimar.init()
 const menudropdown = new MenuDropdown('[data-dropdown]')
 menudropdown.init()
 
+const menuMobile = new MenuMobile('[data-menu="button"]','[data-menu="list"]')
+menuMobile.init()
 
-iniciarMenuMobile()
 iniciarFuncionamento()
 fetchAnimais('./animaisapi.json','.numeros-grid')
 fetchBitcoin('https://blockchain.info/ticker','.btc-preco')
