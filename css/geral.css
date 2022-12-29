@@ -239,11 +239,19 @@ body {
 }
 
 [data-acordion='acordion'] dt::after{
-  content: '⬎';
+  content: '';
   margin-left:10px ;
+  background: url('../img/arrow-red.svg') center center no-repeat;
+  display: inline-block;
+  width: 10px;
+  height: 10px;
+  transform: rotate(90deg);
+  transition: transform .3s;
 }
 [data-acordion='acordion'] dt.ativo::after{
-  content: '⬏';
+  content: '';
+  transform: rotate(-90deg);
+
 }
 [data-acordion='acordion'] dd.ativo{
   display: block;
@@ -298,4 +306,11 @@ body {
   padding: .2rem .5rem;
   font-weight: bold;
   border-radius: 2px;
+}
+
+.arrowBlack{
+  background: url('../img/arrow-black.svg') center center no-repeat;
+  width: 10px;
+  height: 8px;
+  display: inline-block;
 }
