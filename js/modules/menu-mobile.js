@@ -13,7 +13,8 @@ export default class MenuMobile{
   }
  
 
-   abriMenu(){
+   abriMenu(e){
+    e.preventDefault()
     this.menuList.classList.add('ativo')
     this.menuBotao.classList.add('ativo')
     outsideClick(this.menuList,this.eventos,()=>{
