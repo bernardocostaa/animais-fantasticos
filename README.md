@@ -1,12 +1,36 @@
-# Animais Fantasticos
+<h1 align="center">
+  Animais Fantasticos
+</h1>
 
-### Projeto
+<p align="center">
+  <img alt="" src="https://raw.githubusercontent.com/bernardocostaa/surfbot/main/templete.jpg" width="100%">
+</p>
 
-Foi feito um site para gerar infomaçoes sobre animais em HTML5, CSS3 e JavaScript
+<p align="center">
+  <a href="#-tecnologias">Tecnologias</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
+  <a href="https://bernardocostaa.github.io/surfbot/">Projeto</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
+  <a href="#memo-licença">Licença</a>
+</p>
 
-### Template do Projeto
+<br>
 
-<img width="150" align="center" alt="Business_PNG" target="_blank" src="https://raw.githubusercontent.com/bernardocostaa/animais-fantasticos/main/img/bg-animais.png">
+## 🚀 Tecnologias
+
+Esse projeto está sendo desenvolvido com as seguintes tecnologias:
+
+- HTML5
+- CSS3
+- JavaScript
+
+## 🚧 Projeto:
+
+Link do Projeto: [Animais Fantasticos](https://bernardocostaa.github.io/surfbot/)
 
 
-## Acesse o Link: https://bernardocostaa.github.io/animais-fantasticos/
+## :memo: Licença
+
+Esse projeto está sob a licença MIT. Veja o arquivo [LICENSE](https://github.com/bernardocostaa/surfbot/blob/main/LICENSE) para mais detalhes.
+
+---
+
+Feito por Bernardo Costa
