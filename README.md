@@ -3,7 +3,7 @@
 </h1>
 
 <p align="center">
-  <img alt="" src="https://raw.githubusercontent.com/bernardocostaa/surfbot/main/templete.jpg" width="100%">
+  <img alt="" src="https://raw.githubusercontent.com/bernardocostaa/animais-fantasticos/master/templete2.jpg" width="100%">
 </p>
 
 <p align="center">
@@ -29,7 +29,7 @@ Link do Projeto: [Animais Fantasticos](https://bernardocostaa.github.io/animais-
 
 ## :memo: Licença
 
-Esse projeto está sob a licença MIT. Veja o arquivo [LICENSE](https://github.com/bernardocostaa/surfbot/blob/main/LICENSE) para mais detalhes.
+Esse projeto está sob a licença MIT. Veja o arquivo [LICENSE](https://github.com/bernardocostaa/animais-fantasticos/blob/master/LICENSE) para mais detalhes.
 
 ---
 
